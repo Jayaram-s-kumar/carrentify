@@ -1,42 +1,64 @@
-import React, { useState } from 'react'
+import React, { useState ,useRef } from 'react'
 import './Homepage.scss'
 import Carousal from '../components/Carousal/Carousal'
 import DatePicker from 'react-date-picker';
 import 'react-date-picker/dist/DatePicker.css';
 import 'react-calendar/dist/Calendar.css';
+import { Link } from 'react-scroll';
 
 
 function Homepage() {
   const [value, onChange] = useState(new Date());
+
+  const dateInputRef = useRef();
+
+  const handleImageClick = () => {
+    dateInputRef.current.focus()
+  };
+
   return (
     <>
       <div className='herosection'>
 
         <div className="navbar">
           <div className="logo">
-            <p>Car <span>Rentify</span></p>
+            <p>IGORAZA<span>CARRENTLZ</span></p>
           </div>
           <div className="options">
-            <p>Home</p>
-            <p>Rent Details</p>
-            <p>Why choose us</p>
-            <p>Register</p>
+            <a href=""> <p>Home</p></a>
+            <a href="">            <p>Rent Details</p>
+            </a>
+            <a href="">            <p>Why choose us</p>
+            </a>
+            <a href="">            <p>Register</p>
+            </a>
           </div>
         </div>
 
         <div className="herocore">
-          <h1>Rent A Car & <br /> Travel <span>Endless</span></h1>
-          <p>No reservation costs.Great rates. <br />
-            Find What You Need actually.</p>
+          <h1>Drive <span>Your</span>  <br />  Dreams</h1>
+          <p>"Unlock the Road to Adventure <br />Rent Your Freedom Today!</p>
 
           <div className="corebuttons">
-            <button className='contactus'> <p>
-              Contact us</p>
-            </button>
 
-            <button className="booknow">
-              <p>Book Now</p>
-            </button>
+            <Link
+              activeClass="active"
+              to="footerSection"
+              spy={true}
+              smooth={true}
+              offset={-70} // Adjust this offset to control the scrolling position
+              duration={500}
+            >
+              <button className='contactus'> <p>
+                Contact us</p>
+              </button>
+            </Link>
+
+            <a href="">
+              <button className="booknow">
+                <p>Book Now</p>
+              </button>
+            </a>
           </div>
         </div>
 
@@ -61,13 +83,15 @@ function Homepage() {
           <div className="date">
             <img src="/images/calendar.png" alt="" />
             <p>Pickup <span className="hide600">Date</span></p>
-            <img src="/images/down.png" alt="" className='down hide600' />
+            <img src="/images/down.png" alt="" className='down hide600' onClick={handleImageClick}  />
+            {/* <input type="date"  ref={dateInputRef}
+       /> */}
           </div>
 
           <div className="date">
             <img src="/images/calendar.png" alt="" />
             <p>Return <span className="hide600">Date</span></p>
-            <img src="/images/down.png" alt="" className='down hide600' />
+            <img src="/images/down.png" alt="" className='down hide600'  />
           </div>
         </div>
 
@@ -132,42 +156,43 @@ function Homepage() {
         <h1>Find Your Next Long <br /> Drive Now!</h1>
         <div className="datepicker">
 
-        <div className="shedule">
-          <div className="location">
-            <img src="/images/location.png" alt="" />
+          <div className="shedule">
+            <div className="location">
+              <img src="/images/location.png" alt="" />
 
-            <select name="" id="" >
-              <option value=""><span className="hide600"></span> Location</option>
-              <option value="">Mumbai</option>
-              <option value="">Kochi</option>
-              <option value="">Delhi</option>
+              <select name="" id="" >
+                <option value=""><span className="hide600"></span> Location</option>
+                <option value="">Mumbai</option>
+                <option value="">Kochi</option>
+                <option value="">Delhi</option>
 
-            </select>
+              </select>
+            </div>
+
+            <div className="date">
+              <img src="/images/calendar.png" alt="" />
+              <p>Pickup <span className="hide600">Date</span></p>
+              <img src="/images/down.png" alt="" className='down hide600' />
+            </div>
+
+            <div className="date">
+              <img src="/images/calendar.png" alt="" />
+              <p>Return <span className="hide600">Date</span></p>
+              <img src="/images/down.png" alt="" className='down hide600' />
+            </div>
           </div>
 
-          <div className="date">
-            <img src="/images/calendar.png" alt="" />
-            <p>Pickup <span className="hide600">Date</span></p>
-            <img src="/images/down.png" alt="" className='down hide600' />
-          </div>
-
-          <div className="date">
-            <img src="/images/calendar.png" alt="" />
-            <p>Return <span className="hide600">Date</span></p>
-            <img src="/images/down.png" alt="" className='down hide600' />
+          <div className="searchbutton">
+            <button><p>Seacrh</p></button>
           </div>
         </div>
-
-        <div className="searchbutton">
-          <button><p>Seacrh</p></button>
-        </div>
-      </div>
       </div>
 
-      <div className="footer">
+      <div className="footer" id="footerSection">
         <div className="logodiv">
-          <p>Car<span>Rentify</span></p>
-          <p>Rides for the daily <br /> achievers</p>
+          <img src="/images/primary.png" alt="" />
+          <p style={{ "fontWeight": "500" }}>Start with something simple and small,<br />
+            then expand over time</p>
         </div>
         <div className="rest">
           <p>Company</p>
@@ -187,12 +212,13 @@ function Homepage() {
 
         <div className="rest">
           <p>Contact Us</p>
-          <p>info@carrentify.com</p>
-          <p>Dar es salaam,Tanzania</p>
+          <p>Phone: <a href="tel:+917736886026">+917736886026</a></p>
+          <p>mail: <a href="mailto:teamigoraza@gmail.com">teamigoraza@gmail.com</a></p>
         </div>
       </div>
       <div className="love">
-        <p>-- Made with ❤️‍🔥 by IGORAZA</p>
+        <p>ⒸCopyright & All Rights Reserved 2023 <a href="https://www.igoraza.com/">@IGORAZA.</a> Designed By IGORAZA
+        </p>
       </div>
 
     </>
