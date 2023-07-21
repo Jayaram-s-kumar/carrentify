@@ -1,4 +1,4 @@
-import React, { useState ,useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import './Homepage.scss'
 import Carousal from '../components/Carousal/Carousal'
 import DatePicker from 'react-date-picker';
@@ -13,7 +13,7 @@ function Homepage() {
   const dateInputRef = useRef();
 
   const handleImageClick = () => {
-    dateInputRef.current.focus()
+
   };
 
   return (
@@ -73,30 +73,44 @@ function Homepage() {
 
             <select name="" id="" >
               <option value=""><span className="hide600"></span> Location</option>
-              <option value="">Mumbai</option>
-              <option value="">Kochi</option>
-              <option value="">Delhi</option>
+              <option value="">Alappuzha</option>
+              <option value="">Ernakulam</option>
+              <option value="">Kozhikode</option>
+              <option value="">Palakkad</option>
+              <option value="">Kollam</option>
+              <option value="">Kannur</option>
+              <option value="">Idukki</option>
+              <option value="">Kasargod</option>
+              <option value="">Kottayam</option>
+              <option value="">Thrissur</option>
+              <option value="">Pathanamthitta</option>
+              <option value="">Malappuram</option>
+              <option value="">Wayanad</option>
+              <option value="">Thiruvananthapuram</option>
 
             </select>
           </div>
 
           <div className="date">
-            <img src="/images/calendar.png" alt="" />
-            <p>Pickup <span className="hide600">Date</span></p>
-            <img src="/images/down.png" alt="" className='down hide600' onClick={handleImageClick}  />
-            {/* <input type="date"  ref={dateInputRef}
-       /> */}
+            {/* <img src="/images/calendar.png" alt="" /> */}
+            <p>Pickup <span className="hide600"></span></p>
+            {/* <img src="/images/down.png" alt="" className='down hide600' onClick={handleImageClick}  /> */}
+            <input type="date" id='pickdate' />
           </div>
 
           <div className="date">
-            <img src="/images/calendar.png" alt="" />
-            <p>Return <span className="hide600">Date</span></p>
-            <img src="/images/down.png" alt="" className='down hide600'  />
+            {/* <img src="/images/calendar.png" alt="" /> */}
+            <p>Return <span className="hide600"></span></p>
+            {/* <img src="/images/down.png" alt="" className='down hide600'  /> */}
+            <input type="date" id='pickdate' />
+
           </div>
         </div>
 
         <div className="searchbutton">
-          <button><p>Seacrh</p></button>
+          <a href="">
+            <button><p>Seacrh</p></button>
+          </a>
         </div>
       </div>
 
@@ -128,7 +142,7 @@ function Homepage() {
           <p>We provide Best classic serivces as below</p>
         </div>
         <div className="services">
-          <img src="/images/redcar.png" alt="" />
+          <img src="/images/featuring1.png" alt="" />
           <div className="description">
             <div className="each">
               <p>24/7 Customer Support</p>
@@ -162,30 +176,47 @@ function Homepage() {
 
               <select name="" id="" >
                 <option value=""><span className="hide600"></span> Location</option>
-                <option value="">Mumbai</option>
-                <option value="">Kochi</option>
-                <option value="">Delhi</option>
+                <option value="">Alappuzha</option>
+                <option value="">Ernakulam</option>
+                <option value="">Kozhikode</option>
+                <option value="">Palakkad</option>
+                <option value="">Kollam</option>
+                <option value="">Kannur</option>
+                <option value="">Idukki</option>
+                <option value="">Kasargod</option>
+                <option value="">Kottayam</option>
+                <option value="">Thrissur</option>
+                <option value="">Pathanamthitta</option>
+                <option value="">Malappuram</option>
+                <option value="">Wayanad</option>
+                <option value="">Thiruvananthapuram</option>
 
               </select>
             </div>
 
             <div className="date">
-              <img src="/images/calendar.png" alt="" />
-              <p>Pickup <span className="hide600">Date</span></p>
-              <img src="/images/down.png" alt="" className='down hide600' />
+              {/* <img src="/images/calendar.png" alt="" /> */}
+              <p>Pickup <span className="hide600"></span></p>
+              {/* <img src="/images/down.png" alt="" className='down hide600' onClick={handleImageClick}  /> */}
+              <input type="date" id='pickdate' />
             </div>
 
             <div className="date">
-              <img src="/images/calendar.png" alt="" />
-              <p>Return <span className="hide600">Date</span></p>
-              <img src="/images/down.png" alt="" className='down hide600' />
+              {/* <img src="/images/calendar.png" alt="" /> */}
+              <p>Return <span className="hide600"></span></p>
+              {/* <img src="/images/down.png" alt="" className='down hide600'  /> */}
+              <input type="date" id='pickdate' />
+
             </div>
           </div>
 
           <div className="searchbutton">
-            <button><p>Seacrh</p></button>
+            <a href="">
+              <button><p>Seacrh</p></button>
+            </a>
           </div>
         </div>
+
       </div>
 
       <div className="footer" id="footerSection">

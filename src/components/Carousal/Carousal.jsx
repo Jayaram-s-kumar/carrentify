@@ -276,6 +276,8 @@ function Carousal() {
 
                         </div>
 
+                        
+
                     </Slider>
                 </div>
 
