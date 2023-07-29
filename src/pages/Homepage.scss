@@ -578,7 +578,7 @@ a {
 
         display: flex;
         flex-direction: column;
-        align-items: baseline;
+        align-items: center;
         justify-content: space-around;
         row-gap: 15px;
 
@@ -594,8 +594,8 @@ a {
             object-fit: contain;
 
             @media (max-width: 700px) {
-               width: 105px;
-               margin-bottom: -16px;
+                width: 105px;
+                margin-bottom: -16px;
             }
         }
 
@@ -682,7 +682,7 @@ a {
         row-gap: 20px;
     }
 
-    p {
+    .logodiv p {
         font-weight: 500;
         text-align: center;
         font-size: 16px;
@@ -695,21 +695,35 @@ a {
         color: red;
     }
 
-    .socialicons{
+    p{
+        text-align: center;
+
+        @media (max-width: 600px) {
+            font-size: 13px !important;
+        }
+    }
+
+    .socialicons {
         width: 10%;
         display: flex;
         align-items: center;
         justify-content: space-around;
         column-gap: 10px;
-        img{
+
+        img {
             width: 20px;
             height: 20px;
         }
 
-        a{
+        @media (max-width: 600px) {
+            img {
+                width: 17px;
+                height: 17px;
+            }
+        }
+
+        a {
             margin-top: 10px;
         }
     }
 }
-
-
