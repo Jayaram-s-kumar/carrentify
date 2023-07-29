@@ -225,6 +225,7 @@ function Homepage() {
           <p style={{ "fontWeight": "500" }}>Start with something simple and small,<br />
             then expand over time</p>
         </div>
+
         <div className="rest">
           <p>Company</p>
           <p>Rent Details</p>
@@ -250,6 +251,14 @@ function Homepage() {
       <div className="love">
         <p>ⒸCopyright & All Rights Reserved 2023 <a href="https://www.igoraza.com/">@IGORAZA.</a> Designed By IGORAZA
         </p>
+        <div className="socialicons">
+          <img src="images/fbdark.png" alt="" />
+          <img src="images/twitterdark.png" alt="" />
+          <img src="images/linkedindark.png" alt="" />
+          <a href="https://www.igoraza.com/">
+            <img src="images/globedark.png" alt="" />
+          </a>
+        </div>
       </div>
 
     </>

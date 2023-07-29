@@ -671,16 +671,45 @@ a {
     width: 100%;
     background-color: aliceblue;
     padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid rgba(0, 0, 0, 0.427);
+    padding-top: 20px;
+
+    @media (max-width: 884px) {
+        flex-direction: column;
+        row-gap: 20px;
+    }
 
     p {
-        font-weight: 600;
+        font-weight: 500;
         text-align: center;
-        font-size: 11px;
-        color: rgb(52, 28, 138);
+        font-size: 16px;
+        color: rgb(0, 0, 0);
         letter-spacing: 1px;
+        text-align: center;
     }
 
     a {
         color: red;
     }
+
+    .socialicons{
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        column-gap: 10px;
+        img{
+            width: 20px;
+            height: 20px;
+        }
+
+        a{
+            margin-top: 10px;
+        }
+    }
 }
+
+
